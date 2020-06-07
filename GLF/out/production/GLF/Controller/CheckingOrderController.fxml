@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CheckingOrderController">
+   <children>
+      <TextField fx:id="input" layoutX="92.0" layoutY="70.0" promptText="請輸入ID" />
+      <Text layoutX="49.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Button fx:id="OKButton" layoutX="72.0" layoutY="103.0" mnemonicParsing="false" onAction="#OKButton" text="確認" />
+      <Button fx:id="backButton" layoutX="176.0" layoutY="103.0" mnemonicParsing="false" onAction="#backButton" text="返回" />
+      <Text layoutX="68.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="搜索訂單" textAlignment="CENTER">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

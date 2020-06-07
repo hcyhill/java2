@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="285.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddController">
+   <children>
+      <Text layoutX="79.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="增加商品">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="15.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品" textAlignment="CENTER" wrappingWidth="103.69921875" />
+      <Text layoutX="15.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="價格 ( 以數量計算 ) " textAlignment="CENTER" />
+      <Text layoutX="15.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="價格 ( 以重量計算 ) " textAlignment="CENTER" />
+      <CheckBox fx:id="writeBox" layoutX="111.0" layoutY="178.0" mnemonicParsing="false" text="客製化文字" />
+      <TextField fx:id="goodsText" layoutX="129.0" layoutY="75.0" />
+      <TextField fx:id="quantityText" layoutX="129.0" layoutY="107.0" />
+      <TextField fx:id="weightText" layoutX="129.0" layoutY="140.0" />
+      <Button fx:id="OKButton" layoutX="91.0" layoutY="226.0" mnemonicParsing="false" onAction="#OKButton" text="確認" />
+      <Button fx:id="backButton" layoutX="172.0" layoutY="226.0" mnemonicParsing="false" onAction="#backButton" text="返回" />
+   </children>
+</AnchorPane>

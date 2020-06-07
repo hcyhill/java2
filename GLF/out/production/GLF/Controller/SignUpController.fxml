@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="264.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
+   <children>
+      <Text layoutX="167.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="註冊" wrappingWidth="60.724609375">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="帳號 ( 電話號碼 ) : " textAlignment="RIGHT" />
+      <Text layoutX="47.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="姓名 : " textAlignment="RIGHT" wrappingWidth="97.46484375" />
+      <Text layoutX="47.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密碼 :" textAlignment="RIGHT" wrappingWidth="97.46484375" />
+      <Text layoutX="47.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="確認密碼 : " textAlignment="RIGHT" wrappingWidth="97.46484375" />
+      <TextField fx:id="nameText" layoutX="165.0" layoutY="76.0" />
+      <TextField fx:id="accountText" layoutX="165.0" layoutY="105.0" />
+      <PasswordField fx:id="passwordText" layoutX="165.0" layoutY="135.0" />
+      <PasswordField fx:id="confirmPasswordText" layoutX="165.0" layoutY="165.0" />
+      <Button fx:id="OKButton" layoutX="124.0" layoutY="203.0" mnemonicParsing="false" onAction="#OKButton" text="確認" />
+      <Button fx:id="backButton" layoutX="225.0" layoutY="203.0" mnemonicParsing="false" onAction="#backButton" text="返回" />
+   </children>
+</AnchorPane>

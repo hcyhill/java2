@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="410.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProductController">
+   <children>
+      <Text layoutX="252.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="商品表">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Button fx:id="OKButton" layoutX="389.0" layoutY="310.0" mnemonicParsing="false" onAction="#OKButton" text="確定" />
+      <Button fx:id="backButton" layoutX="282.0" layoutY="346.0" mnemonicParsing="false" onAction="#backButton" text="返回" />
+      <TableView fx:id="goodsTable" layoutX="26.0" layoutY="72.0" prefHeight="225.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="col_Goods" prefWidth="110.0" text="商品" />
+          <TableColumn fx:id="col_Quantity" prefWidth="110.0" text="價格/數量" />
+            <TableColumn prefWidth="110.0" />
+            <TableColumn fx:id="col_Weight" prefWidth="110.0" text="價格/重量" />
+            <TableColumn prefWidth="110.0" />
+        </columns>
+      </TableView>
+      <Text layoutX="159.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="選擇商品" />
+      <TextField fx:id="input" layoutX="221.0" layoutY="310.0" promptText="請輸入商品" />
+   </children>
+</AnchorPane>

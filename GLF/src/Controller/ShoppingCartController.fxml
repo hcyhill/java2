@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ShoppingCartController">
+   <children>
+      <Text layoutX="255.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="購物車" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TableView fx:id="shoppingCartTable" layoutX="50.0" layoutY="52.0" prefHeight="235.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="col_goods" prefWidth="100.0" text="商品" />
+          <TableColumn fx:id="col_unit" prefWidth="100.0" text="數量/重量" />
+            <TableColumn prefWidth="100.0" />
+            <TableColumn fx:id="col_price" prefWidth="100.0" text="價格" />
+            <TableColumn prefWidth="100.0" />
+        </columns>
+      </TableView>
+      <Button fx:id="buyButton" layoutX="194.0" layoutY="327.0" mnemonicParsing="false" onAction="#buyButton" text="購買" />
+      <Button fx:id="backButton" layoutX="371.0" layoutY="327.0" mnemonicParsing="false" onAction="#backButton" text="返回" />
+   </children>
+</AnchorPane>

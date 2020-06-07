@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TrackingOrderController">
+   <children>
+      <Text layoutX="109.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查詢訂單">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TableView fx:id="orderTable" layoutX="29.0" layoutY="71.0" prefHeight="242.0" prefWidth="303.0">
+        <columns>
+          <TableColumn fx:id="col_Id" prefWidth="302.0" text="ID" />
+        </columns>
+      </TableView>
+      <TextField fx:id="input" layoutX="61.0" layoutY="325.0" promptText="輸入ID" />
+      <Button fx:id="OKButton" layoutX="235.0" layoutY="325.0" mnemonicParsing="false" onAction="#OKButton" text="確定" />
+      <Button fx:id="backButton" layoutX="163.0" layoutY="363.0" mnemonicParsing="false" onAction="#backButton" text="返回" />
+   </children>
+</AnchorPane>
