@@ -42,7 +42,7 @@ public class SignUpController extends LoginController{
             System.out.println("Sign-up Failed");
         else {
             String privilege = "false";
-            memberdata.memberSign(name, account, password, privilege);
+            memberSign(name, account, password, privilege);
             back(actionEvent);
         }
     }

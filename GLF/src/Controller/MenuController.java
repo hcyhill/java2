@@ -1,18 +1,19 @@
 package Controller;
 
-import Data.Goods;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.sql.SQLException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MenuController extends LoginController{
+public class MenuController extends LoginController implements Initializable {
     @FXML
     Button productsButton;
     @FXML
@@ -26,8 +27,13 @@ public class MenuController extends LoginController{
     @FXML
     Button exitButton;
 
-    Goods g = new Goods();
-
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if (privilege == "FALSE"){
+            checkingOrderButton.setDisable(true);
+            addProductButton.setDisable(true);
+        }
+    }
 
     public void productsButton(ActionEvent actionEvent) throws IOException {
         Stage currentStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
@@ -57,5 +63,6 @@ public class MenuController extends LoginController{
     public void exitButton(ActionEvent actionEvent){
         System.exit(0);
     }
+
 
 }

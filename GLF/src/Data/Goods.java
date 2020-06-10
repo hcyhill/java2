@@ -7,7 +7,6 @@ import java.sql.Statement;
 
 public class Goods {
     private String id,name, quantity, weight,write;
-    private static Connection dbCon = DBConnect.getConnection();
 
     public Goods(){
 
@@ -34,33 +33,20 @@ public class Goods {
     public String getWrite() {
         return write;
     }
-    public void setId(){
+    public void setId(String id){
         this.id = id;
     }
-    public void setName(){
+    public void setName(String name){
         this.name = name;
     }
-    public void setQuantity(){
+    public void setQuantity(String quantity){
         this.quantity = quantity;
     }
-    public void setWeight(){
+    public void setWeight(String weight){
         this.weight = weight;
     }
-    public void setWrite(){
+    public void setWrite(String write){
         this.write = write;
     }
 
-    public void addProduct(String goodsName,String goodsQuantity,String goodsWeight,String goodsWrite) throws SQLException {
-        Statement stmt = dbCon.createStatement();
-        try {
-            stmt.executeUpdate("insert into goods(gName,gQuantity,gWeight,gWrite) values ('" + goodsName + "','"
-                    + goodsQuantity + "','" + goodsWeight + "','" + goodsWrite + "')");
-        } finally {
-            try {
-                stmt.close();
-            } catch (SQLException error) {
-                error.printStackTrace();
-            }
-        }
-    }
 }

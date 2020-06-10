@@ -21,11 +21,6 @@ public class CheckingOrderController {
     TextField input;
 
 
-
-    public void initialize(){
-
-
-    }
     public void OKButton(ActionEvent actionEvent){
         String goods = input.getText();
     }

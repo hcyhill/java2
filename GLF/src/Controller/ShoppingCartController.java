@@ -57,13 +57,13 @@ public class ShoppingCartController extends MenuController implements Initializa
         col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
         shoppingCartTable.setItems(data);
 
-
     }
 
 
     public void buyButton(ActionEvent actionEvent){
 
     }
+
     public void backButton(ActionEvent actionEvent) throws IOException {
         Stage currentStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("MenuController.fxml"));

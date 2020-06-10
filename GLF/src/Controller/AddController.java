@@ -1,5 +1,6 @@
 package Controller;
 
+import Data.DBConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AddController extends MenuController{
     @FXML
@@ -28,15 +31,15 @@ public class AddController extends MenuController{
     @FXML
     CheckBox writeBox;
 
+    private static Connection dbCon = DBConnect.getConnection();
     public void OKButton(ActionEvent actionEvent) throws IOException, SQLException {
         String goodsName = goodsText.getText();
         String goodsQuantity = quantityText.getText();
         String goodsWeight = weightText.getText();
         String goodsWrite = handleWriteBox();
-        g.addProduct(goodsName,goodsQuantity,goodsWeight,goodsWrite);
+        addProduct(goodsName,goodsQuantity,goodsWeight,goodsWrite);
         back(actionEvent);
     }
-
     public void backButton(ActionEvent actionEvent) throws IOException {
         back(actionEvent);
 
@@ -52,5 +55,19 @@ public class AddController extends MenuController{
             return "true";
         }
         return "false";
+    }
+
+    public void addProduct(String goodsName,String goodsQuantity,String goodsWeight,String goodsWrite) throws SQLException {
+        Statement stmt = dbCon.createStatement();
+        try {
+            stmt.executeUpdate("insert into goods(gName,gQuantity,gWeight,gWrite) values ('" + goodsName + "','"
+                    + goodsQuantity + "','" + goodsWeight + "','" + goodsWrite + "')");
+        } finally {
+            try {
+                stmt.close();
+            } catch (SQLException error) {
+                error.printStackTrace();
+            }
+        }
     }
 }
